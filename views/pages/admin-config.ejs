@@ -1,0 +1,53 @@
+<h2>Admin Website Config</h2>
+
+<form method="POST" action="/admin/config/save">
+
+  <label>Site Name</label>
+  <input name="siteName" value="<%= site.siteName %>" />
+
+  <label>Site Title</label>
+  <input name="siteTitle" value="<%= site.siteTitle %>" />
+
+  <label>Description</label>
+  <textarea name="siteDescription"><%= site.siteDescription %></textarea>
+
+  <label>Author</label>
+  <input name="siteAuthor" value="<%= site.siteAuthor %>" />
+
+  <label>Keywords</label>
+  <input name="keywords" value="<%= site.meta?.keywords || '' %>" />
+
+  <label>Theme Color</label>
+  <input name="themeColor" value="<%= site.meta?.themeColor || '' %>" />
+
+    <hr style="margin:18px 0;" />
+<h3>Menu Links</h3>
+
+<% const menu = site.menu || []; %>
+<% const getUrl = (label) => (menu.find(m => m.label === label) || {}).url || ""; %>
+
+<label>Discord URL</label>
+<input name="menu_discord" value="<%= getUrl('Discord') %>" placeholder="https://discord.gg/..." />
+
+<label>Home URL</label>
+<input name="menu_home" value="<%= getUrl('Home') || '/' %>" placeholder="/" />
+
+<label>Job List URL</label>
+<input name="menu_jobs" value="<%= getUrl('Job List') || '/jobs' %>" placeholder="/jobs" />
+
+<label>Rules URL</label>
+<input name="menu_rules" value="<%= getUrl('Rules') || '/rules' %>" placeholder="/rules" />
+
+<label>Team URL</label>
+<input name="menu_team" value="<%= getUrl('Team') || '/team' %>" placeholder="/team" />
+
+<label>Donate URL</label>
+<input name="menu_donate" value="<%= getUrl('Donate') || '/donate' %>" placeholder="/donate" />
+
+  <button type="submit">Save</button>
+  
+</form>
+<br /><center><form method="POST" action="/admin/logout" style="margin-top:16px;">
+  <button type="submit">Logout</button>
+</form>
+</center>
