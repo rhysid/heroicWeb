@@ -1,0 +1,36 @@
+{
+  "siteName": "HEROIC ROLEPLAY",
+  "siteTitle": "HEROIC ROLEPLAY",
+  "siteDescription": "Komunitas Game Online GTA SA Roleplay di Indonesia",
+  "siteAuthor": "zen",
+  "meta": {
+    "keywords": "gta, samp, rp, roleplay, samp rp",
+    "themeColor": "#0d6efd"
+  },
+  "menu": [
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/VJp67k86he"
+    },
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Job List",
+      "url": "/jobs"
+    },
+    {
+      "label": "Rules",
+      "url": "Ini HTML RULES"
+    },
+    {
+      "label": "Team",
+      "url": "/team"
+    },
+    {
+      "label": "Donate",
+      "url": "/donate"
+    }
+  ]
+}
